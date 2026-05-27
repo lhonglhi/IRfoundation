@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Content Draft — IR Foundation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+        "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.65;
+      font-size: 16px;
+    }
+    a { color: #CD202B; }
+    a:hover { text-decoration: underline; }
+
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 14px 32px;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    }
+    .topbar h1 { font-size: 16px; font-weight: 600; color: #1a1a1a; }
+    .topbar nav { display: flex; gap: 14px; font-size: 14px; flex-wrap: wrap; }
+    .topbar nav a { color: #555; text-decoration: none; }
+    .topbar nav a:hover { color: #CD202B; }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 32px 120px;
+    }
+
+    section { margin-bottom: 56px; }
+
+    h2.section-id {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #CD202B;
+      margin-bottom: 10px;
+    }
+    h3.section-name {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #1a1a1a;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 140px 1fr 1fr;
+      gap: 24px;
+      padding: 14px 0;
+      border-bottom: 1px solid #eee;
+      align-items: start;
+    }
+    .row:last-child { border-bottom: none; }
+    .row .label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding-top: 2px;
+    }
+    .row .en, .row .zh {
+      font-size: 15px;
+      color: #1a1a1a;
+    }
+    .row .en p + p, .row .zh p + p { margin-top: 8px; }
+
+    .lang-headers {
+      display: grid;
+      grid-template-columns: 140px 1fr 1fr;
+      gap: 24px;
+      padding: 10px 0;
+      border-bottom: 1px solid #1a1a1a;
+      margin-bottom: 6px;
+    }
+    .lang-headers div {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #999;
+    }
+
+    .big { font-size: 20px; font-weight: 700; }
+    .accent { color: #CD202B; }
+    .muted { color: #666; }
+    .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 13px; }
+
+    .note {
+      background: #fafafa;
+      border-left: 3px solid #CD202B;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: #555;
+      margin-top: 14px;
+    }
+
+    .pills { display: flex; flex-wrap: wrap; gap: 6px; }
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #f4f4f4;
+      border-radius: 999px;
+      font-size: 13px;
+      color: #333;
+    }
+
+    @media (max-width: 800px) {
+      .row, .lang-headers { grid-template-columns: 1fr; gap: 8px; }
+      .row .label { font-size: 11px; }
+      .lang-headers div + div::before { content: "—"; margin-right: 6px; }
+      .wrap { padding: 32px 20px 80px; }
+      .topbar { padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <h1>IR Foundation — Content Draft</h1>
+    <nav>
+      <a href="#meta">Meta</a>
+      <a href="#nav">Nav</a>
+      <a href="#hero">Hero</a>
+      <a href="#about">About</a>
+      <a href="#mission">Mission</a>
+      <a href="#education">Education</a>
+      <a href="#web3">Web3</a>
+      <a href="#contact">Contact</a>
+      <a href="#footer">Footer</a>
+      <a href="#propose">New?</a>
+      <span style="color:#ccc">|</span>
+      <a href="index.html">EN site</a>
+      <a href="home-zh.html">中文 site</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+
+    <!-- META -->
+    <section id="meta">
+      <h2 class="section-id">01 · Meta / SEO</h2>
+      <h3 class="section-name">Page title + description</h3>
+      <div class="lang-headers"><div></div><div>EN</div><div>中文</div></div>
+      <div class="row">
+        <div class="label">Title</div>
+        <div class="en">Intelligent Racing Foundation</div>
+        <div class="zh">智脑竞速基金会 — Intelligent Racing Foundation</div>
+      </div>
+      <div class="row">
+        <div class="label">Description</div>
+        <div class="en muted">Intelligent Racing Foundation is committed to promoting emerging exponential-growth technologies, education, and adoption by new generations of innovators.</div>
+        <div class="zh muted">智脑竞速基金会致力于推动新兴指数级增长技术、教育及新一代创新者的应用与发展。</div>
+      </div>
+    </section>
+
+    <!-- NAV -->
+    <section id="nav">
+      <h2 class="section-id">02 · Navigation</h2>
+      <h3 class="section-name">Top menu links</h3>
+      <div class="lang-headers"><div></div><div>EN</div><div>中文</div></div>
+      <div class="row">
+        <div class="label">Links</div>
+        <div class="en">
+          <div class="pills">
+            <span class="pill">AI</span>
+            <span class="pill">Education</span>
+            <span class="pill">Web3</span>
+            <span class="pill">Contact</span>
+          </div>
+        </div>
+        <div class="zh">
+          <div class="pills">
+            <span class="pill">人工智能</span>
+            <span class="pill">教育</span>
+            <span class="pill">Web3</span>
+            <span class="pill">联系我们</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERO -->
+    <section id="hero">
+      <h2 class="section-id">03 · Hero</h2>
+      <h3 class="section-name">Top of page</h3>
+      <div class="lang-headers"><div></div><div>EN</div><div>中文</div></div>
+      <div class="row">
+        <div class="label">Logo</div>
+        <div class="en muted mono">images/IRF_logo.svg (placeholder)</div>
+        <div class="zh muted mono">images/IRF_logo.svg (占位)</div>
+      </div>
+      <div class="row">
+        <div class="label">H1</div>
+        <div class="en big"><span class="accent">Hitch Open</span> World AI Racing Championships</div>
+        <div class="zh big"><span class="accent">Hitch Open</span> 世界 AI 竞速锦标赛</div>
+      </div>
+      <div class="row">
+        <div class="label">Tagline</div>
+        <div class="en">The world's first physical-AI arena in nature</div>
+        <div class="zh">全球首个物理智能大自然竞技场</div>
+      </div>
+      <div class="row">
+        <div class="label">Sub</div>
+        <div class="en muted">L4–L5 autonomous driving on Tianmen Mountain's 99 Bends — where AI learns the physical world.</div>
+        <div class="zh muted">L4–L5 全自动驾驶挑战张家界天门山九十九道弯，让 AI 在大自然中理解物理世界。</div>
+      </div>
+      <div class="row">
+        <div class="label">CTA 1</div>
+        <div class="en">Learn More → <span class="mono">https://hitchopen.ai/</span></div>
+        <div class="zh">了解更多 → <span class="mono">https://hitchopen.ai/</span></div>
+      </div>
+      <div class="row">
+        <div class="label">CTA 2</div>
+        <div class="en">About the Foundation → <span class="mono">#about</span></div>
+        <div class="zh">关于基金会 → <span class="mono">#about</span></div>
+      </div>
+      <div class="note">
+        Slideshow imgs (5s 切换):
+        Tianmen-Mountain's-99-Bends.png · Screenshot-2025-02-12-at-7.42.11-PM.png · AIRacing_01.png · Cover-tms.png · Intelligent-Racing-Extreme-AI-Challenge2025-Venue.png
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2 class="section-id">04 · About the Foundation</h2>
+      <h3 class="section-name">Mission overview</h3>
+      <div class="lang-headers"><div></div><div>EN</div><div>中文</div></div>
+      <div class="row">
+        <div class="label">Eyebrow</div>
+        <div class="en accent">About Us</div>
+        <div class="zh accent">关于我们</div>
+      </div>
+      <div class="row">
+        <div class="label">H2</div>
+        <div class="en big">About <span class="accent">Intelligent Racing Foundation</span></div>
+        <div class="zh big">关于 <span class="accent">智脑竞速基金会</span></div>
+      </div>
+      <div class="row">
+        <div class="label">Paragraph 1</div>
+        <div class="en"><p>The Intelligent Racing Foundation, a nonprofit organization based in Nevada, USA, is dedicated to advancing global AI innovation and STEM education. Our mission is to empower future innovators by providing world-class AI racing platforms, global standards, and open data access, fostering an ecosystem where technology and talent can thrive. We believe that true greatness lies in creating a ripple effect of innovation and opportunity that reaches millions.</p></div>
+        <div class="zh"><p>智脑竞速基金会（Intelligent Racing Foundation）是一家总部位于美国内华达州的非营利组织，致力于推动全球 AI 与颠覆性科技创新以及 STEM 教育。我们的使命是通过提供世界级 AI 竞速平台、制定全球标准并开源，赋能未来创新者，并打造一个科技与人才共同繁荣的生态系统。我们坚信，通过适用于千万人普惠全球的创新与机遇，推动 AI 以及汽车自动驾驶、机器人智能发展的边界。</p></div>
+      </div>
+      <div class="row">
+        <div class="label">Paragraph 2</div>
+        <div class="en"><p>To achieve this, the foundation collaborates with world-class experts to establish global standards for AI racing and data protocols, driving technological advancement and open collaboration. Through partnerships with leading research universities and scientific institutions worldwide, we have sponsored numerous AI autonomous racing competitions across the United States and Asia, providing a dynamic platform for education, research, and talent development. By pushing the boundaries of AI and fostering a global ecosystem of learning and innovation, the Intelligent Racing Foundation is shaping a future where technology serves as a catalyst for limitless possibility.</p></div>
+        <div class="zh"><p>为实现这一目标，基金会联合全球顶尖专家制定 AI 竞速与数据协议标准，推动技术发展与开放合作。我们与世界一流的研究型大学和科研机构合作，在美国及亚洲赞助了多个 AI 自主竞速赛事，为教育、研究和人才培养提供了一个充满活力的平台。通过突破 AI 技术极限，培养全球学习与创新生态，智脑竞速基金会正塑造一个科技成为无限可能催化剂的未来。</p></div>
+      </div>
+    </section>
+
+    <!-- MISSION -->
+    <section id="mission">
+      <h2 class="section-id">05 · Mission Cards</h2>
+      <h3 class="section-name">3 cards under About</h3>
+      <div class="lang-headers"><div></div><div>EN</div><div>中文</div></div>
+      <div class="row">
+        <div class="label">Card 1<br><span class="mono muted">AI_012x.png</span></div>
+        <div class="en">Artificial Intelligence</div>
+        <div class="zh">人工智能 (AI)</div>
+      </div>
+      <div class="row">
+        <div class="label">Card 2<br><span class="mono muted">STEM_012x.png</span></div>
+        <div class="en">STEM &amp; Professional Education</div>
+        <div class="zh">STEM 与职业教育</div>
+      </div>
+      <div class="row">
+        <div class="label">Card 3<br><span class="mono muted">WEB3_012x.png</span></div>
+        <div class="en">Web3 &amp; Blockchain</div>
+        <div class="zh">Web3 与区块链</div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2 class="section-id">06 · Education</h2>
+      <h3 class="section-name">STEM &amp; professional education</h3>
+      <div class="note mono">Image: images/AILab_012x.png (left side)</div>
+      <div class="lang-headers"><div></div><div>EN</div><div>中文</div></div>
+      <div class="row">
+        <div class="label">Eyebrow</div>
+        <div class="en accent">Education</div>
+        <div class="zh accent">教育</div>
+      </div>
+      <div class="row">
+        <div class="label">H2</div>
+        <div class="en big">STEM &amp; <span class="accent">Professional Education</span></div>
+        <div class="zh big">STEM 与 <span class="accent">职业教育</span></div>
+      </div>
+      <div class="row">
+        <div class="label">Body</div>
+        <div class="en">
+          <p>Through strategic partnerships with governments, K-12 schools, and universities, the Foundation is transforming AI STEM education with a holistic "Race, Learn, and Play" approach. By integrating world-class AI competitions, cutting-edge AI curricula, and immersive AI Labs, we are empowering the next generation of innovators.</p>
+          <p>Our initiatives extend beyond the classroom — modernizing race tracks for AI-driven competition and developing interactive AI educational materials — bridging the gap between learning and real-world application to shape the future of intelligent mobility.</p>
+          <p>Our official AI Education Partner is <a href="https://hitchinteractive.com/" target="_blank" rel="noopener">Hitch Interactive</a>.</p>
+        </div>
+        <div class="zh">
+          <p>智脑竞速基金会通过与政府、K-12 学校及大学的战略合作，推动 AI STEM 教育的全面革新，并采用"赛、学、玩"相结合的模式。我们通过世界级 AI 竞赛、前沿 AI 课程和沉浸式 AI 实训基地的有机结合，为下一代颠覆性创新者赋能。</p>
+          <p>我们的教育项目不仅限于课堂，更致力于通过现代化 AI 竞赛赛道和互动式 AI 教育资源，打通理论学习与现实应用的桥梁，为智能出行的未来培养新一代科技人才。</p>
+          <p>官方 AI 教育合作伙伴 <a href="https://hitchinteractive.com/" target="_blank" rel="noopener">Hitch Interactive</a>。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEB3 -->
+    <section id="web3">
+      <h2 class="section-id">07 · Web3</h2>
+      <h3 class="section-name">Decentralizing AI innovation</h3>
+      <div class="note mono">Image: images/WEB3_bg.png (right side)</div>
+      <div class="lang-headers"><div></div><div>EN</div><div>中文</div></div>
+      <div class="row">
+        <div class="label">Eyebrow</div>
+        <div class="en accent">Web3</div>
+        <div class="zh accent">Web3</div>
+      </div>
+      <div class="row">
+        <div class="label">H2</div>
+        <div class="en big">Decentralizing <span class="accent">AI Innovation</span></div>
+        <div class="zh big">去中心化的 <span class="accent">AI 创新</span></div>
+      </div>
+      <div class="row">
+        <div class="label">Body</div>
+        <div class="en">
+          <p>The Foundation believes decentralized blockchain and Web3 applications can democratize access to AI and emerging technologies, ensuring equitable global impact. By leveraging Web3's decentralized networks, we are building a borderless ecosystem that connects AI innovators, researchers, and industry leaders worldwide.</p>
+          <p>Beyond meetups, we host academic conferences, thought leadership forums, and global summits to drive collaboration and knowledge exchange. In partnership with <a href="https://hitchinteractive.com/salon/" target="_blank" rel="noopener">Hitch Salon</a>, we have gathered AI pioneers at Consensus @ Austin, CES @ Las Vegas, New York, Napa Valley, Milan, and Shanghai.</p>
+          <p>Through this decentralized model of influence, we are scaling AI innovation globally, fostering collaboration without borders, and accelerating the future of intelligent technology.</p>
+        </div>
+        <div class="zh">
+          <p>智脑竞速基金会相信，去中心化的区块链和 Web3 应用能够实现 AI 及前沿科技的普惠化，确保全球范围内的公平影响力。借助 Web3 的去中心化网络，我们正在构建一个无国界的创新生态，将 AI 研究者、行业领袖和开发者连接在一起。</p>
+          <p>除了定期举办 AI 以及颠覆性科技相关的交流活动，我们还在全球范围内组织学术会议、思想领袖论坛及国际峰会，促进跨界合作和知识共享。与 <a href="https://hitchinteractive.com/salon/" target="_blank" rel="noopener">Hitch Salon</a> 合作，我们曾在 Consensus @ Austin、CES @ Las Vegas、纽约、纳帕谷、米兰和上海汇聚全球 AI 先锋。</p>
+          <p>通过这一去中心化的影响模式，我们正在全球范围内扩展 AI 创新，促进无国界协作，加速颠覆性科技的未来发展。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-id">08 · Contact</h2>
+      <h3 class="section-name">Email addresses</h3>
+      <div class="lang-headers"><div></div><div>EN</div><div>中文</div></div>
+      <div class="row">
+        <div class="label">Eyebrow</div>
+        <div class="en accent">Get In Touch</div>
+        <div class="zh accent">联系我们</div>
+      </div>
+      <div class="row">
+        <div class="label">H2</div>
+        <div class="en big">Contact <span class="accent">Us</span></div>
+        <div class="zh big">Contact <span class="accent">Us</span></div>
+      </div>
+      <div class="row">
+        <div class="label">General</div>
+        <div class="en"><a href="mailto:info@intelligentracing.org">info@intelligentracing.org</a></div>
+        <div class="zh"><a href="mailto:info@intelligentracing.org">info@intelligentracing.org</a> <span class="muted">(通用咨询)</span></div>
+      </div>
+      <div class="row">
+        <div class="label">Media</div>
+        <div class="en"><a href="mailto:media@intelligentracing.com">media@intelligentracing.com</a></div>
+        <div class="zh"><a href="mailto:media@intelligentracing.com">media@intelligentracing.com</a> <span class="muted">(媒体合作)</span></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer">
+      <h2 class="section-id">09 · Footer</h2>
+      <h3 class="section-name">Bottom line</h3>
+      <div class="lang-headers"><div></div><div>EN</div><div>中文</div></div>
+      <div class="row">
+        <div class="label">Copyright</div>
+        <div class="en muted">© 2026 Intelligent Racing Foundation. All rights reserved.</div>
+        <div class="zh muted">© 2026 智脑竞速基金会 · Intelligent Racing Foundation. All rights reserved.</div>
+      </div>
+    </section>
+
+    <!-- PROPOSE -->
+    <section id="propose">
+      <h2 class="section-id">10 · Proposed new sections</h2>
+      <h3 class="section-name">Decide which to add</h3>
+      <div class="pills">
+        <span class="pill">Stats strip (universities / events / countries)</span>
+        <span class="pill">Past events &amp; venues gallery</span>
+        <span class="pill">University logo wall (HN / JL / QH / SH / WH / ZJ)</span>
+        <span class="pill">Media coverage / press logos</span>
+        <span class="pill">Social links footer (Discord / X / WeChat / Weibo / YouTube / Zhihu)</span>
+        <span class="pill">News / press releases</span>
+        <span class="pill">Track specs (length / elevation / 99 bends)</span>
+        <span class="pill">Leaderboard preview</span>
+      </div>
+      <div class="note">Tell me which to add + supply numbers / URLs / logos / text.</div>
+    </section>
+
+  </main>
+</body>
+</html>
